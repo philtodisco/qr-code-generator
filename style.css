@@ -1,16 +1,8 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .form {
     display: flex;
     flex-direction: column;
     width: 25vh ;
-    border: 2px solid gray;
+    border: 2px solid rgb(227, 227, 227);;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -31,7 +23,7 @@ button {
     font-family: 'Courier New', Courier, monospace;
 }
 
-label {
+.form-element label {
     font-size: large;
 }
 
@@ -41,4 +33,64 @@ label {
     font-family: 'Courier New', Courier, monospace;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	background: #292C35;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	padding: 5px;
+	height: 20px;
+	width: 44px;
+	transform: scale(1.5);
+    margin-bottom: 50px;
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 16px;
+	width: 16px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p.dark, #qr-input-label.dark, #qr-size-label.dark  {
+    color: rgb(227, 227, 227);
+}
 

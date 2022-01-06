@@ -9,15 +9,20 @@
     <title>QR Code Generator</title>
 </head>
 <body>
+    <p id="p-label">light/dark</p>
+    <input type="checkbox" class="checkbox" id="chk" />
+	<label class="label" for="chk">
+		<div class="ball"></div>
+	</label>
     <div class="form">
         <div class="form-element">
-            <label for="qr-input">Insert URL Below</label>
+            <label for="qr-input" id="qr-input-label">Insert URL Below</label>
         </div>
         <div class="form-element">
             <input type="text" id="qr-input"> 
         </div>
         <div class="form-element">
-            <label for="qr-size">Insert Size Below</label>
+            <label for="qr-size" id="qr-size-label">Insert Size Below</label>
         </div>
         <div class="form-element">
             <input type="number" placeholder="default 200px" id="qr-size"> 

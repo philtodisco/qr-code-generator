@@ -19,3 +19,15 @@ btn.addEventListener('click', () => {
     }
 })
 
+const chk = document.getElementById("chk")
+const p = document.getElementById("p-label")
+const qrInputLabel = document.getElementById("qr-input-label")
+const qrSizeLabel = document.getElementById("qr-size-label")
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark')
+    p.classList.toggle('dark')
+    qrInputLabel.classList.toggle('dark')
+    qrSizeLabel.classList.toggle('dark')
+});
+
