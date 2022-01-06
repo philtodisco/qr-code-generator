@@ -2,6 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -9,5 +10,35 @@ body {
     display: flex;
     flex-direction: column;
     width: 25vh ;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
+
+.qr-code {
+    margin: 30px;
+}
+
+.form-element {
+    margin: 10px;
+}
+
+button {
+    font-size: large;
+    padding: 11px;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    font-size: large;
+}
+
+#qr-size, #qr-input {
+    width: 20vh;
+    height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 

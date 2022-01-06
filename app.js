@@ -11,6 +11,11 @@ let qrCode = document.querySelector(".qr-code img")
 btn.addEventListener('click', () => {
     let url = urlInput.value
     let qrSize = sizeInput.value
-    let image = `http://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${qrSize}x${qrSize}`
+    if (url.length > 0) {
+        let image = `http://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${qrSize}x${qrSize}`
     qrCode.src = image
+    } else {
+        alert("Please enter input greater than 0 characters")
+    }
 })
+
