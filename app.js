@@ -3,11 +3,14 @@
 
 let urlInput = document.querySelector("#qr-input")
 let btn = document.querySelector(".form button")
-let qrCode = document.querySelector(".qr-code img") 
+let sizeInput = document.querySelector("#qr-size")
+let qrSize = "200"
+let qrCode = document.querySelector(".qr-code img")
+
 
 btn.addEventListener('click', () => {
     let url = urlInput.value
-    // console.log(url)
-    let image = `http://api.qrserver.com/v1/create-qr-code/?data=${url}&size=200x200`
+    let qrSize = sizeInput.value
+    let image = `http://api.qrserver.com/v1/create-qr-code/?data=${url}&size=${qrSize}x${qrSize}`
     qrCode.src = image
 })
